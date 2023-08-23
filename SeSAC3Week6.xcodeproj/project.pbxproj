@@ -21,6 +21,7 @@
 		14CD6BA52A95CA46005C4A9C /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD6BA42A95CA46005C4A9C /* WeatherViewController.swift */; };
 		14CD6BA82A95CC38005C4A9C /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD6BA72A95CC38005C4A9C /* PaddingLabel.swift */; };
 		14CD6BAB2A95D8D2005C4A9C /* PaddingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD6BAA2A95D8D2005C4A9C /* PaddingImage.swift */; };
+		14CD6BAD2A960406005C4A9C /* CinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CD6BAC2A960406005C4A9C /* CinemaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		14CD6BA42A95CA46005C4A9C /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		14CD6BA72A95CC38005C4A9C /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		14CD6BAA2A95D8D2005C4A9C /* PaddingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingImage.swift; sourceTree = "<group>"; };
+		14CD6BAC2A960406005C4A9C /* CinemaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				149047DA2A94792600E8B928 /* LocationViewController.swift */,
 				149047DC2A94A46700E8B928 /* KakaoTalkViewController.swift */,
 				14CD6BA42A95CA46005C4A9C /* WeatherViewController.swift */,
+				14CD6BAC2A960406005C4A9C /* CinemaViewController.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				149047D72A94467900E8B928 /* SnapViewController.swift in Sources */,
 				14881B6B2A930A00004B5C4C /* ViewController.swift in Sources */,
 				149047DB2A94792700E8B928 /* LocationViewController.swift in Sources */,
+				14CD6BAD2A960406005C4A9C /* CinemaViewController.swift in Sources */,
 				14CD6BA52A95CA46005C4A9C /* WeatherViewController.swift in Sources */,
 				14CD6BA82A95CC38005C4A9C /* PaddingLabel.swift in Sources */,
 				14CD6BAB2A95D8D2005C4A9C /* PaddingImage.swift in Sources */,

@@ -107,6 +107,7 @@ class LocationViewController: UIViewController {
         
     }
     
+    // 위치 권한 알림 
     func showLocationSettingAlert() {
         let alert = UIAlertController(title: "위치 정보 이용", message: "위치 서비스를 사용할 수 없습니다. 기기의 '설정 > 개인정보 보호'에서 위치 서비스를 켜주세요.", preferredStyle: .alert)
         
@@ -185,7 +186,7 @@ class LocationViewController: UIViewController {
 extension LocationViewController: CLLocationManagerDelegate {
     
     // 5. 사용자의 위치를 성공적으로 가지고 온 경우
-    // 한번만 실행되지 않고, iOS 위치 업데이트가 필요한 시점에 알아서 여러번 호출된다.
+    // 한 번만 실행되지 않고, iOS 위치 업데이트가 필요한 시점에 알아서 여러번 호출된다.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let coordinate = locations.last?.coordinate {

@@ -85,7 +85,7 @@ class ViewController: UIViewController {
     }
     
     @objc func signButtonClicked() {
-        let vc = WeatherViewController()
+        let vc = CinemaViewController()
 //        let nav = UINavigationController(rootViewController: vc)
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)

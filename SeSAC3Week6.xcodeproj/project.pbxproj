@@ -10,9 +10,15 @@
 		14881B672A930A00004B5C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B662A930A00004B5C4C /* AppDelegate.swift */; };
 		14881B692A930A00004B5C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B682A930A00004B5C4C /* SceneDelegate.swift */; };
 		14881B6B2A930A00004B5C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B6A2A930A00004B5C4C /* ViewController.swift */; };
-		14881B6E2A930A00004B5C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14881B6C2A930A00004B5C4C /* Main.storyboard */; };
 		14881B702A930A02004B5C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14881B6F2A930A02004B5C4C /* Assets.xcassets */; };
 		14881B732A930A02004B5C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14881B712A930A02004B5C4C /* LaunchScreen.storyboard */; };
+		148CD8D72A96F0E800A234E7 /* GenericViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8D62A96F0E800A234E7 /* GenericViewController.swift */; };
+		148CD8D92A96F0FE00A234E7 /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8D82A96F0FE00A234E7 /* Extension + UIViewController.swift */; };
+		148CD8DC2A971CE100A234E7 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8DB2A971CE100A234E7 /* CustomViewController.swift */; };
+		148CD8DE2A971E9A00A234E7 /* BlackRadiusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8DD2A971E9A00A234E7 /* BlackRadiusTextField.swift */; };
+		148CD8E02A972A1300A234E7 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8DF2A972A1300A234E7 /* CustomTableViewController.swift */; };
+		148CD8E82A979AA100A234E7 /* CodeFlixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8E72A979AA100A234E7 /* CodeFlixViewController.swift */; };
+		148CD8EA2A979AB000A234E7 /* GrayTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148CD8E92A979AB000A234E7 /* GrayTextField.swift */; };
 		149047D42A94460A00E8B928 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 149047D32A94460A00E8B928 /* SnapKit */; };
 		149047D72A94467900E8B928 /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149047D62A94467900E8B928 /* SnapViewController.swift */; };
 		149047D92A945CB800E8B928 /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149047D82A945CB800E8B928 /* TextViewController.swift */; };
@@ -29,10 +35,16 @@
 		14881B662A930A00004B5C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14881B682A930A00004B5C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		14881B6A2A930A00004B5C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		14881B6D2A930A00004B5C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14881B6F2A930A02004B5C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14881B722A930A02004B5C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14881B742A930A02004B5C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		148CD8D62A96F0E800A234E7 /* GenericViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericViewController.swift; sourceTree = "<group>"; };
+		148CD8D82A96F0FE00A234E7 /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
+		148CD8DB2A971CE100A234E7 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		148CD8DD2A971E9A00A234E7 /* BlackRadiusTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackRadiusTextField.swift; sourceTree = "<group>"; };
+		148CD8DF2A972A1300A234E7 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		148CD8E72A979AA100A234E7 /* CodeFlixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFlixViewController.swift; sourceTree = "<group>"; };
+		148CD8E92A979AB000A234E7 /* GrayTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayTextField.swift; sourceTree = "<group>"; };
 		149047D62A94467900E8B928 /* SnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
 		149047D82A945CB800E8B928 /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
 		149047DA2A94792600E8B928 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -59,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				14881B652A930A00004B5C4C /* SeSAC3Week6 */,
-				14CD6BA92A95D8C4005C4A9C /* UIImageView */,
-				14CD6BA62A95CC1E005C4A9C /* UILabel */,
 				14881B642A930A00004B5C4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,16 +86,48 @@
 		14881B652A930A00004B5C4C /* SeSAC3Week6 */ = {
 			isa = PBXGroup;
 			children = (
-				149047D52A94464000E8B928 /* Test */,
+				148CD8E62A979A8D00A234E7 /* TextField */,
+				148CD8DA2A971CB100A234E7 /* CustomView */,
 				14881B662A930A00004B5C4C /* AppDelegate.swift */,
 				14881B682A930A00004B5C4C /* SceneDelegate.swift */,
 				14881B6A2A930A00004B5C4C /* ViewController.swift */,
-				14881B6C2A930A00004B5C4C /* Main.storyboard */,
+				149047D52A94464000E8B928 /* Test */,
+				148CD8D52A96F0D500A234E7 /* Generic */,
+				14CD6BA92A95D8C4005C4A9C /* UIImageView */,
+				14CD6BA62A95CC1E005C4A9C /* UILabel */,
 				14881B6F2A930A02004B5C4C /* Assets.xcassets */,
 				14881B712A930A02004B5C4C /* LaunchScreen.storyboard */,
 				14881B742A930A02004B5C4C /* Info.plist */,
 			);
 			path = SeSAC3Week6;
+			sourceTree = "<group>";
+		};
+		148CD8D52A96F0D500A234E7 /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				148CD8D62A96F0E800A234E7 /* GenericViewController.swift */,
+				148CD8D82A96F0FE00A234E7 /* Extension + UIViewController.swift */,
+			);
+			path = Generic;
+			sourceTree = "<group>";
+		};
+		148CD8DA2A971CB100A234E7 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				148CD8DB2A971CE100A234E7 /* CustomViewController.swift */,
+				148CD8DD2A971E9A00A234E7 /* BlackRadiusTextField.swift */,
+				148CD8DF2A972A1300A234E7 /* CustomTableViewController.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		148CD8E62A979A8D00A234E7 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				148CD8E92A979AB000A234E7 /* GrayTextField.swift */,
+				148CD8E72A979AA100A234E7 /* CodeFlixViewController.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		149047D52A94464000E8B928 /* Test */ = {
@@ -183,7 +225,6 @@
 			files = (
 				14881B732A930A02004B5C4C /* LaunchScreen.storyboard in Resources */,
 				14881B702A930A02004B5C4C /* Assets.xcassets in Resources */,
-				14881B6E2A930A00004B5C4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,15 +236,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				149047DD2A94A46700E8B928 /* KakaoTalkViewController.swift in Sources */,
+				148CD8DC2A971CE100A234E7 /* CustomViewController.swift in Sources */,
 				149047D92A945CB800E8B928 /* TextViewController.swift in Sources */,
+				148CD8DE2A971E9A00A234E7 /* BlackRadiusTextField.swift in Sources */,
 				149047D72A94467900E8B928 /* SnapViewController.swift in Sources */,
 				14881B6B2A930A00004B5C4C /* ViewController.swift in Sources */,
 				149047DB2A94792700E8B928 /* LocationViewController.swift in Sources */,
 				14CD6BAD2A960406005C4A9C /* CinemaViewController.swift in Sources */,
+				148CD8D72A96F0E800A234E7 /* GenericViewController.swift in Sources */,
 				14CD6BA52A95CA46005C4A9C /* WeatherViewController.swift in Sources */,
 				14CD6BA82A95CC38005C4A9C /* PaddingLabel.swift in Sources */,
 				14CD6BAB2A95D8D2005C4A9C /* PaddingImage.swift in Sources */,
+				148CD8E82A979AA100A234E7 /* CodeFlixViewController.swift in Sources */,
+				148CD8E02A972A1300A234E7 /* CustomTableViewController.swift in Sources */,
 				14881B672A930A00004B5C4C /* AppDelegate.swift in Sources */,
+				148CD8D92A96F0FE00A234E7 /* Extension + UIViewController.swift in Sources */,
+				148CD8EA2A979AB000A234E7 /* GrayTextField.swift in Sources */,
 				14881B692A930A00004B5C4C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,14 +259,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		14881B6C2A930A00004B5C4C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14881B6D2A930A00004B5C4C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		14881B712A930A02004B5C4C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -357,7 +397,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 날씨에 대한 정보를 가지고 오기 위해 위치 정보가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,7 +425,6 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 날씨에 대한 정보를 가지고 오기 위해 위치 정보가 필요해요.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

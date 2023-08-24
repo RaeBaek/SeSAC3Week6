@@ -88,6 +88,9 @@ class LocationViewController: UIViewController {
         if type == 0 { //viewDidLoad
             mapView.addAnnotations([annotation1, annotation2])
         } else if type == 1 {
+            // 지역과 전역에 대한 변수 및 상수의 범위에 따라 기능이 실행이되고 그렇지 않을 수 있다.
+            // mapView.removeAnnotation(annotation1)
+            
             mapView.removeAnnotations(mapView.annotations)
             mapView.addAnnotations([annotation2])
         }

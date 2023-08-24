@@ -80,15 +80,13 @@ class ViewController: UIViewController {
             signButton.widthAnchor.constraint(equalToConstant: 300),
             signButton.heightAnchor.constraint(equalToConstant: 50),
             signButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        
         ])
     }
     
     @objc func signButtonClicked() {
-        let vc = CinemaViewController()
-//        let nav = UINavigationController(rootViewController: vc)
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
+        // storyboard name 또한 열거형을 사용한다면
+        // literal한 String 값들은 사용하지 않을 수 있을 것이다.
+        transition(viewController: GenericViewController.self, storyboad: "Main", style: .presentNavigation)
     }
 
 }

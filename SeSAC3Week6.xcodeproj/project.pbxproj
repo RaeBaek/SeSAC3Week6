@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14312BBD2AB1A6270062D7FE /* CodeFilxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14312BBC2AB1A6270062D7FE /* CodeFilxViewModel.swift */; };
+		14312BBF2AB1A6310062D7FE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14312BBE2AB1A6310062D7FE /* Observable.swift */; };
+		14312BC12AB1AA1E0062D7FE /* CodeFlixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14312BC02AB1AA1E0062D7FE /* CodeFlixView.swift */; };
 		147F70E12A982AE2008BA84B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F70E02A982AE2008BA84B /* CustomTableViewCell.swift */; };
 		147F70E32A982B10008BA84B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 147F70E22A982B10008BA84B /* .gitignore */; };
 		147F70E52A9840A4008BA84B /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F70E42A9840A4008BA84B /* PosterImageView.swift */; };
 		147F70E82A984B58008BA84B /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F70E72A984B58008BA84B /* OnboardingViewController.swift */; };
 		147F70EB2A987428008BA84B /* CinemaLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F70EA2A987428008BA84B /* CinemaLocation.swift */; };
+		147F70F52A989E4C008BA84B /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F70F42A989E4C008BA84B /* UIView + Extension.swift */; };
 		14881B672A930A00004B5C4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B662A930A00004B5C4C /* AppDelegate.swift */; };
 		14881B692A930A00004B5C4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B682A930A00004B5C4C /* SceneDelegate.swift */; };
 		14881B6B2A930A00004B5C4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14881B6A2A930A00004B5C4C /* ViewController.swift */; };
@@ -36,11 +40,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14312BBC2AB1A6270062D7FE /* CodeFilxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFilxViewModel.swift; sourceTree = "<group>"; };
+		14312BBE2AB1A6310062D7FE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		14312BC02AB1AA1E0062D7FE /* CodeFlixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeFlixView.swift; sourceTree = "<group>"; };
 		147F70E02A982AE2008BA84B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		147F70E22A982B10008BA84B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		147F70E42A9840A4008BA84B /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
 		147F70E72A984B58008BA84B /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		147F70EA2A987428008BA84B /* CinemaLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaLocation.swift; sourceTree = "<group>"; };
+		147F70F42A989E4C008BA84B /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		14881B632A930A00004B5C4C /* SeSAC3Week6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSAC3Week6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14881B662A930A00004B5C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14881B682A930A00004B5C4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +102,14 @@
 			path = Cinema;
 			sourceTree = "<group>";
 		};
+		147F70F32A989E35008BA84B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				147F70F42A989E4C008BA84B /* UIView + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		14881B5A2A930A00004B5C4C = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +140,7 @@
 				148CD8D52A96F0D500A234E7 /* Generic */,
 				14CD6BA92A95D8C4005C4A9C /* UIImageView */,
 				14CD6BA62A95CC1E005C4A9C /* UILabel */,
+				147F70F32A989E35008BA84B /* Extension */,
 				14881B6F2A930A02004B5C4C /* Assets.xcassets */,
 				14881B712A930A02004B5C4C /* LaunchScreen.storyboard */,
 				14881B742A930A02004B5C4C /* Info.plist */,
@@ -156,7 +173,10 @@
 		148CD8E62A979A8D00A234E7 /* TextField */ = {
 			isa = PBXGroup;
 			children = (
+				14312BBE2AB1A6310062D7FE /* Observable.swift */,
 				148CD8E92A979AB000A234E7 /* GrayTextField.swift */,
+				14312BBC2AB1A6270062D7FE /* CodeFilxViewModel.swift */,
+				14312BC02AB1AA1E0062D7FE /* CodeFlixView.swift */,
 				148CD8E72A979AA100A234E7 /* CodeFlixViewController.swift */,
 			);
 			path = TextField;
@@ -268,8 +288,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				149047DD2A94A46700E8B928 /* KakaoTalkViewController.swift in Sources */,
+				147F70F52A989E4C008BA84B /* UIView + Extension.swift in Sources */,
 				148CD8DC2A971CE100A234E7 /* CustomViewController.swift in Sources */,
 				149047D92A945CB800E8B928 /* TextViewController.swift in Sources */,
+				14312BC12AB1AA1E0062D7FE /* CodeFlixView.swift in Sources */,
 				148CD8DE2A971E9A00A234E7 /* BlackRadiusTextField.swift in Sources */,
 				147F70E82A984B58008BA84B /* OnboardingViewController.swift in Sources */,
 				149047D72A94467900E8B928 /* SnapViewController.swift in Sources */,
@@ -279,8 +301,10 @@
 				14CD6BAD2A960406005C4A9C /* CinemaViewController.swift in Sources */,
 				148CD8D72A96F0E800A234E7 /* GenericViewController.swift in Sources */,
 				14CD6BA52A95CA46005C4A9C /* WeatherViewController.swift in Sources */,
+				14312BBD2AB1A6270062D7FE /* CodeFilxViewModel.swift in Sources */,
 				14CD6BA82A95CC38005C4A9C /* PaddingLabel.swift in Sources */,
 				14CD6BAB2A95D8D2005C4A9C /* PaddingImage.swift in Sources */,
+				14312BBF2AB1A6310062D7FE /* Observable.swift in Sources */,
 				148CD8E82A979AA100A234E7 /* CodeFlixViewController.swift in Sources */,
 				147F70EB2A987428008BA84B /* CinemaLocation.swift in Sources */,
 				148CD8E02A972A1300A234E7 /* CustomTableViewController.swift in Sources */,

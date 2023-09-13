@@ -10,131 +10,106 @@ import SnapKit
 
 class CodeFlixViewController: UIViewController {
     
-    let hoonFlix = {
-        let label = UILabel()
-        label.text = "HOONFLIX"
-        label.textColor = .red
-        label.font = .systemFont(ofSize: 30, weight: .heavy)
-        return label
-    }()
+    let mainView = CodeFilxView()
+    var viewModel = CodeFilxViewModel()
     
-    let emailTextField = {
-        let textField = GrayTextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "이메일 주소 또는 전화번호", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        return textField
-    }()
-    
-    let passwordTextField = {
-        let textField = GrayTextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "비밀번호", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        return textField
-    }()
-    
-    let nicknameTextField = {
-        let textField = GrayTextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "닉네임", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        return textField
-    }()
-    
-    let locationTextField = {
-        let textField = GrayTextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "위치", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        return textField
-    }()
-    
-    let recommendCodeTextField = {
-        let textField = GrayTextField()
-        textField.attributedPlaceholder = NSAttributedString(string: "추천 코드 입력", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
-        return textField
-    }()
-    
-    let signUpButton = {
-        var configuration = UIButton.Configuration.filled()
-        var titleContainer = AttributeContainer()
-        titleContainer.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-        // 버튼 Contents 커스텀
-        configuration.attributedTitle = AttributedString("회원가입", attributes: titleContainer)
-        configuration.baseBackgroundColor = .white
-        configuration.baseForegroundColor = .black
-        let button = UIButton(configuration: configuration)
-        return button
-    }()
-    
-    let addInfo = {
-        let label = UILabel()
-        label.text = "추가 정보 입력"
-        label.font = .systemFont(ofSize: 15, weight: .regular)
-        label.textColor = .white
-        return label
-    }()
-    
-    let redSwitch = {
-        let toggle = UISwitch()
-        toggle.onTintColor = .red
-        return toggle
-    }()
+    override func loadView() {
+        self.view = mainView
+        mainView.backgroundColor = .systemBackground
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        mainView.configureView()
         
-        view.backgroundColor = .black
+        mainView.emailTextField.addTarget(self, action: #selector(emailTextFieldChanged), for: .editingChanged)
         
-        [hoonFlix, emailTextField, passwordTextField, nicknameTextField, locationTextField, recommendCodeTextField, signUpButton, addInfo, redSwitch].forEach {
-            view.addSubview($0)
+        mainView.passwordTextField.addTarget(self, action: #selector(passwordTextFieldChanged), for: .editingChanged)
+        
+        mainView.nicknameTextField.addTarget(self, action: #selector(nicknameTextFieldChanged), for: .editingChanged)
+        
+        mainView.locationTextField.addTarget(self, action: #selector(locationTextFieldChanged), for: .editingChanged)
+        
+        mainView.recommendCodeTextField.addTarget(self, action: #selector(recommendCodeTextFieldChanged), for: .editingChanged)
+        
+        mainView.signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
+        
+        viewModel.emailValue.bind { text in
+            self.mainView.emailTextField.text = text
+            print("emailTextField: \(text)")
         }
         
-        hoonFlix.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide).offset(20)
-            $0.centerX.equalToSuperview()
+        viewModel.passwordValue.bind { text in
+            self.mainView.passwordTextField.text = text
+            print("passwordTextField: \(text)")
         }
         
-        emailTextField.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview().inset(30)
-            $0.height.equalTo(40)
-            $0.centerY.equalToSuperview().multipliedBy(0.6)
+        viewModel.nicknameValue.bind { text in
+            self.mainView.nicknameTextField.text = text
+            print("nicknameTextField: \(text)")
         }
         
-        passwordTextField.snp.makeConstraints {
-            $0.horizontalEdges.equalTo(emailTextField)
-            $0.top.equalTo(emailTextField.snp.bottom).offset(20)
-            $0.height.equalTo(emailTextField)
+        viewModel.locationValue.bind { text in
+            self.mainView.locationTextField.text = text
+            print("locationTextField: \(text)")
         }
         
-        nicknameTextField.snp.makeConstraints {
-            $0.horizontalEdges.equalTo(passwordTextField)
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(20)
-            $0.height.equalTo(passwordTextField)
+        viewModel.recommendCodeValue.bind { text in
+            self.mainView.recommendCodeTextField.text = text
+            print("recommendCodeTextField: \(text)")
         }
         
-        locationTextField.snp.makeConstraints {
-            $0.horizontalEdges.equalTo(nicknameTextField)
-            $0.top.equalTo(nicknameTextField.snp.bottom).offset(20)
-            $0.height.equalTo(nicknameTextField)
-        }
-        
-        recommendCodeTextField.snp.makeConstraints {
-            $0.horizontalEdges.equalTo(locationTextField)
-            $0.top.equalTo(locationTextField.snp.bottom).offset(20)
-            $0.height.equalTo(locationTextField)
-        }
-        
-        signUpButton.snp.makeConstraints {
-            $0.horizontalEdges.equalTo(recommendCodeTextField)
-            $0.top.equalTo(recommendCodeTextField.snp.bottom).offset(20)
-            $0.height.equalTo(50)
-        }
-        
-        addInfo.snp.makeConstraints {
-            $0.top.equalTo(signUpButton.snp.bottom).offset(20)
-            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(30)
-            
-        }
-        
-        redSwitch.snp.makeConstraints {
-            $0.top.equalTo(signUpButton.snp.bottom).offset(20)
-            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-30)
+        viewModel.isValid.bind { bool in
+            self.mainView.signUpButton.isEnabled = bool
+            print("signUpButton: \(bool)")
         }
         
     }
     
+    @objc func emailTextFieldChanged() {
+        guard let text = mainView.emailTextField.text else { return }
+        viewModel.emailValue.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc func passwordTextFieldChanged() {
+        guard let text = mainView.passwordTextField.text else { return }
+        viewModel.passwordValue.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc func nicknameTextFieldChanged() {
+        guard let text = mainView.nicknameTextField.text else { return }
+        viewModel.nicknameValue.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc func locationTextFieldChanged() {
+        guard let text = mainView.locationTextField.text else { return }
+        viewModel.locationValue.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc func recommendCodeTextFieldChanged() {
+        guard let text = mainView.recommendCodeTextField.text else { return }
+        viewModel.recommendCodeValue.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc func signUpButtonClicked() {
+        viewModel.signUp {
+            print("회원가입에 성공했기 때문에 얼럿 띄우기!")
+            let alert = UIAlertController(title: "경 축", message: "MVVM 패턴을 이해하셨습니다~", preferredStyle: .alert)
+            
+            let ok = UIAlertAction(title: "확인", style: .default)
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            
+            alert.addAction(ok)
+            alert.addAction(cancel)
+            
+            self.present(alert, animated: true)
+            
+        }
+    }
 }

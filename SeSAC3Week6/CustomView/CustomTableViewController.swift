@@ -77,7 +77,7 @@ extension CustomTableViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         list[indexPath.row].isExpand.toggle()
 //        tableView.reloadData()
-        // at: [indexPath, IndexPath(row: 2, section: 0)] -> 선택한 셀과 함께 다른 셀도 가능하다.
+//         at: [indexPath, IndexPath(row: 2, section: 0)] -> 선택한 셀과 함께 다른 셀도 가능하다.
         tableView.reloadRows(at: [indexPath], with: .automatic)
         
     }

@@ -74,7 +74,7 @@ class TextViewController: UIViewController {
         
         // 읽는 권한과 쓰는 권한은 다르다고 볼 수 있다.
         // 이미지를 선택하는 읽는 권한은 요청없이 가져올 수 있다.
-        picker.sourceType = .camera //.photoLibrary
+        picker.sourceType = .photoLibrary // .camera
         picker.delegate = self
         picker.allowsEditing = true
         

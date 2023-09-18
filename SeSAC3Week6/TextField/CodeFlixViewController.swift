@@ -20,6 +20,8 @@ class CodeFlixViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bindData()
 
         mainView.configureView()
         
@@ -35,34 +37,57 @@ class CodeFlixViewController: UIViewController {
         
         mainView.signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         
+    }
+    
+    func bindData() {
         viewModel.emailValue.bind { text in
             self.mainView.emailTextField.text = text
-            print("emailTextField: \(text)")
         }
         
         viewModel.passwordValue.bind { text in
             self.mainView.passwordTextField.text = text
-            print("passwordTextField: \(text)")
         }
         
         viewModel.nicknameValue.bind { text in
             self.mainView.nicknameTextField.text = text
-            print("nicknameTextField: \(text)")
         }
         
         viewModel.locationValue.bind { text in
             self.mainView.locationTextField.text = text
-            print("locationTextField: \(text)")
         }
         
         viewModel.recommendCodeValue.bind { text in
             self.mainView.recommendCodeTextField.text = text
-            print("recommendCodeTextField: \(text)")
         }
         
-        viewModel.isValid.bind { bool in
-            self.mainView.signUpButton.isEnabled = bool
-            print("signUpButton: \(bool)")
+        viewModel.emailResult.bind { text in
+            self.mainView.emailStateLabel.text = text
+        }
+        
+        viewModel.passwordResult.bind { text in
+            self.mainView.passwordStateLabel.text = text
+        }
+        
+        viewModel.nicknameResult.bind { text in
+            self.mainView.nicknameStateLabel.text = text
+        }
+        
+        viewModel.locationResult.bind { text in
+            self.mainView.locationStateLabel.text = text
+        }
+        
+        viewModel.recommendCodeResult.bind { text in
+            self.mainView.recommendCodeStateLabel.text = text
+        }
+        
+        viewModel.isValidArray.bind { state in
+            
+            if state.email == true && state.password == true && state.nickname == true && state.location == true && state.recommendCode {
+                
+                self.mainView.signUpButton.isEnabled = true
+            } else {
+                return
+            }
         }
         
     }
@@ -70,31 +95,33 @@ class CodeFlixViewController: UIViewController {
     @objc func emailTextFieldChanged() {
         guard let text = mainView.emailTextField.text else { return }
         viewModel.emailValue.value = text
-        viewModel.checkValidation()
+        viewModel.convertEmail()
     }
     
     @objc func passwordTextFieldChanged() {
         guard let text = mainView.passwordTextField.text else { return }
         viewModel.passwordValue.value = text
-        viewModel.checkValidation()
+        viewModel.convertPassword()
     }
     
     @objc func nicknameTextFieldChanged() {
         guard let text = mainView.nicknameTextField.text else { return }
         viewModel.nicknameValue.value = text
-        viewModel.checkValidation()
+        viewModel.convertNickname()
     }
     
     @objc func locationTextFieldChanged() {
         guard let text = mainView.locationTextField.text else { return }
         viewModel.locationValue.value = text
-        viewModel.checkValidation()
+        viewModel.convertLocation()
+        
     }
     
     @objc func recommendCodeTextFieldChanged() {
         guard let text = mainView.recommendCodeTextField.text else { return }
         viewModel.recommendCodeValue.value = text
-        viewModel.checkValidation()
+        viewModel.convertRecommendCode()
+        
     }
     
     @objc func signUpButtonClicked() {
